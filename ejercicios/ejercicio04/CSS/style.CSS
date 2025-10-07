@@ -1,6 +1,15 @@
 #titulo{
     color: red;
 }
-#contenido{
-    background-color: lightgrey;
+.contenido{
+    background-color: grey;
+}
+.trabajador{
+    text-align: center;
+}
+#trabajador_1{
+    color: blue;
+}
+#trabajador_2{
+    color: green;
 }
