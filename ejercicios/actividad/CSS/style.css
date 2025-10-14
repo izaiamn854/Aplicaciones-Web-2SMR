@@ -19,5 +19,12 @@ a:hover{
 }
 nav{
     color: silver;
-    font: size 20px;;
+    font-size: 20px;
+}
+nav:hover{
+    cursor: default;
+} 
+main{
+    width: 1000px;
+    margin: auto;
 }
