@@ -1,4 +1,9 @@
 
+body{
+    background:url("../img/fondol3.jpg");
+    background-repeat: no-repeat;
+    background-color: #F9F1CF;
+}
 a{
     text-decoration: none;
     color: orange;
@@ -9,10 +14,9 @@ nav li{
     display: inline-block;
     padding:4px 70px;
     text-align: center;
-    background-color: grey;
 }
 ul{
-    padding: 0;
+    padding: 0; 
 }
 a:hover{
     color: white;
@@ -24,7 +28,15 @@ nav{
 nav:hover{
     cursor: default;
 } 
-main{
+#contenido{
     width: 1000px;
     margin: auto;
+}
+.articulos{
+    width: 240px;
+    border: 1px lightgray solid;
+    background-color: white;
+    text-align: center;
+    padding: 5px 5px 22px 5px;
+    box-shadow: 0px 0px 4px gray;
 }
