@@ -1,0 +1,116 @@
+/* Reset y configuración general */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Cabecera */
+header {
+    background-color: #F5A623;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Contenido principal */
+main {
+    background-color: beige;
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* Caja de la receta */
+#receta {
+    background-color: white;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Imagen de la receta */
+#imagen-receta img {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Características */
+#caracteristicas ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+#caracteristicas li {
+    margin-bottom: 10px;
+}
+
+/* Encabezados */
+#receta h1, #receta h2 {
+    color: #F5A623;
+    text-align: center;
+}
+
+#elaboracion p {
+    line-height: 1.6;
+}
+
+/* Ingredientes */
+#ingredientes {
+    margin-top: 0.5rem;
+}
+
+#ingredientes table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#ingredientes th {
+    background-color: #F5A623;
+    color: white;
+    padding: 0.75rem 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+#ingredientes td {
+    padding: 0.65rem 1rem;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+#ingredientes tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+#ingredientes tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
