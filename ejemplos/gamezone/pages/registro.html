@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Registro de usuario en GameZone">
+  <link rel="stylesheet" href="../estilos.css">
+  <title>Registro – GameZone</title>
+</head>
+<body>
+    <header class="cabecera">
+        <div class="marca">
+        <img src="../imagenes/gamezone-logo.png" alt="Logotipo GameZone" class="logo">
+        </div>
+        <nav class="navegacion">
+            <ul class="menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Noticias</a></li>
+                <li><a href="#">Guías</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Registro</a></li>
+            </ul>
+            <section class="tarjeta buscador">
+                <form name="buscar-juego" action="buscar.html" method="get">
+                    <label for="busqueda">Buscar juego:</label>
+                    <input type="search" id="busqueda" name="busqueda" placeholder="Introduce el nombre del juego">
+                    <button type="submit">Buscar</button>
+                </form>
+            </section>
+        </nav>
+    </header>
+
+<main id="contenido-principal">
+    <section class="tarjeta">
+        <h2>Registro de usuario</h2>
+        <form name="register" action="registrocompleto.html" method="post">
+        <div class="form-group">
+          <label for="nombre">Nombre de usuario:</label>
+          <input class="registro" type="text" id="nombre" name="nombre" placeholder="Nombre de usuario" required>
+        </div>
+        <div class="form-group">
+          <label for="clave">Contraseña:</label>
+          <input class="registro" type="password" id="clave" name="clave" placeholder="Contraseña" minlength="6" maxlength="12" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico:</label>
+          <input class="registro" type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+        </div>
+        <div class="form-group">
+          <label for="dni">DNI/NIE:</label>
+          <input class="registro" type="text" id="dni" name="dni" pattern="([0-9]{1}|[X-Zx-z]{1}-?)[0-9]{7}[A-Za-z]{1}" placeholder="12345678L/X1234567L" required>
+        </div>
+        <button type="submit">Registrarse</button>
+      </form>
+    </section>
+</main>
+
+  <footer class="pie">
+    <p>&copy; 2025 Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

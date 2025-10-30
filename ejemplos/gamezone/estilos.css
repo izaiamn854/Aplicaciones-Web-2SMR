@@ -1,0 +1,167 @@
+/* Reset y base */
+/* box-sizing: para que tenga en cuenta el padding y el margin en el tamaño total */
+* {
+    box-sizing: border-box;
+}
+
+/* Establecemos altura completa del documento */
+html, body {
+    height: 100%;
+}
+
+/* El body se convierte en contenedor flex
+    - flex-direction: column -> apila verticalmente el header, main y footer 
+    - min-height: 100vh -> ocupa toda la altura de la ventana (vh = viewport height)
+*/
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    background: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;      /* Altura total del viewport */
+}
+
+/* Centramos y rellenamos la cabecera */
+/* CABECERA con FLEX: dos zonas -> logo/titulo (marca) y menú (nav)*/
+.cabecera {
+    text-align: center;
+    padding: 1rem;
+    color: #fff;
+    background: #2C3E50;
+    display: flex;
+    justify-content: space-between; /* Posiciona marca izq. y nav derecha */
+    align-items: center;            /* Centra verticalmente */
+}
+
+/* Tamaño de la imagen (logo) */
+.logo {
+    height: 100px;
+    width: auto;
+    /* display: block; */
+}
+
+/* Título de la cabecera sin márgenes extra y color destacado */
+/* .titulo {
+    margin: 0;
+    color: #2C3E50;
+} */
+
+/* Menú de navegación con flex */
+.menu {
+    list-style-type: none;
+    display: flex;          /* Para colocar los enlaces/ítems en línea */
+    flex-direction: row;    /* Por defecto es row, por tanto podemos prescindir de esta línea */
+    gap: 1.5rem;            /* Espacio entre enlaces */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos básicos de los enlaces del menú */
+.menu a {
+    color: #fff;
+    text-decoration: none;      /* Elimina el subrayado */
+    font-weight: bold;          /* Aplica negrita a los enlaces */
+    /* padding: 1rem; */
+}
+
+/* Efecto hover en enlaces */
+.menu a:hover {
+    color: #E74C3C;
+    /* background-color: #fff; */
+}
+
+
+/* Zona principal (main): aplicamos relleno */
+#contenido-principal {
+    padding: 1rem;
+    flex-grow: 1;           /*IMPORTANTE para "empujar" al footer hacia abajo*/
+    /* flex: 1; */          /* Atajo de las propiedades flex-grow y flex-basis */
+
+    display: flex;          /* Convierto al main como contenedor flexible */
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Clase "tarjeta": usado para agrupar secciones visualmente */
+.tarjeta {
+    background: #fff;
+    width: min(900px, 95%);
+    margin: 1.5rem auto;      /* Centramos el contenido */
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+    border: 1px solid #ddd;
+}
+
+/*Listas en dos columnas: usamos flexbox para alinear dos elementos en horizontal*/
+.listas {
+    display: flex;          /* Contenedor flexible */
+    flex-direction: row;    /* Los items se coloquen en filas */
+    gap: 2rem;              /* Hueco entre columnas */
+    flex-wrap: wrap;        /* Permite saltar a la siguiente línea en pantallas pequeñas */
+    /* flex-flow: row wrap; */
+}
+
+/* Ajustes visuales de las listas */
+.lista {
+    padding-left: 20px;     /*Espacio para las viñetas*/
+}
+
+.lista li {
+    margin: 0.25rem 0;      /* Espacio vertical entre los elementos de las listas */
+}
+
+/* Tabla: 
+    - width: ocupe todo el ancho
+    - border-collapse: unir los bordes internos
+*/
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+/* Bordes y relleno de la tabla */
+.tabla th, .tabla td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* Cabecera de la tabla con estilo diferenciado */
+.tabla th {
+    background: #2C3E50;
+    color: #fff;
+    text-align: center;
+}
+
+/* Contenido de tabla alineado a la izquierda */
+.tabla td {
+    text-align: left;
+    white-space: nowrap;    /* Evita saltos de línea en celdas */
+}
+
+/* Estilo pie de página */
+.pie {
+    color: #7f8c8d;
+    font-size: 14px;
+    background: #ecf0f1;
+    text-align: center;
+    padding: 1rem;
+}
+input {
+  border: 2px solid #2C3E50;
+}
+
+/* válido tras interacción */
+.registro:user-valid {
+  border: 2px solid green;
+}
+/* inválido tras interacción */
+.registro:user-invalid {
+  border: 2px solid red;
+}
+.buscar-juego-label{
+    color: #000000;
+}
