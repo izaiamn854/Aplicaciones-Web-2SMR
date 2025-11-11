@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacto con GameZone – Soporte y consultas">
+  <link rel="stylesheet" href="../estilos.css">
+  <title>Contacto – GameZone</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__brand">
+      <img src="../imagenes/gamezone-logo.png" alt="Logotipo GameZone" class="header__logo">
+    </div>
+
+    <nav class="header__nav">
+      <ul class="nav__menu">
+        <li class="nav__item"><a href="../index.html" class="nav__link">Inicio</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Noticias</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Guías</a></li>
+        <li class="nav__item"><a href="contacto.html" class="nav__link nav__link--active">Contacto</a></li>
+        <li class="nav__item"><a href="registro.html" class="nav__link">Registro</a></li>
+        <li class="nav__item"><a href="tienda.html" class="nav__link">Tienda</a></li>
+      </ul>
+    </nav>
+
+    <form class="header__search" action="buscar.html" method="get">
+      <label for="busqueda" class="search__label">Buscar juego:</label>
+      <input type="search" id="busqueda" name="busqueda" placeholder="Introduce el nombre del juego" class="search__input">
+      <button type="submit" class="search__button">Buscar</button>
+    </form>
+  </header>
+
+  <main class="main" role="main">
+    <section class="form-card form-card--contact">
+      <h1 class="form-card__title">Contacto con GameZone</h1>
+      <p class="form-card__text">Rellena el formulario y nos pondremos en contacto contigo lo antes posible.</p>
+      
+      <form class="form-card__form" action="contacto-enviado.html" method="post">
+        <div class="form-card__field">
+          <label for="nombre" class="form-card__label">Nombre completo:</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" class="form-card__input" required>
+        </div>
+
+        <div class="form-card__field">
+          <label for="email" class="form-card__label">Correo electrónico:</label>
+          <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" class="form-card__input" required>
+        </div>
+
+        <div class="form-card__field">
+          <label for="asunto" class="form-card__label">Asunto:</label>
+          <input type="text" id="asunto" name="asunto" placeholder="Motivo del contacto" class="form-card__input" required>
+        </div>
+
+        <div class="form-card__field">
+          <label for="mensaje" class="form-card__label">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." class="form-card__input" required></textarea>
+        </div>
+
+        <button type="submit" class="form-card__button">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__text">&copy; 2025 Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

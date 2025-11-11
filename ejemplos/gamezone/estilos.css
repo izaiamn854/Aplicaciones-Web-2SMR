@@ -1,204 +1,245 @@
-/* Reset y base */
-/* box-sizing: para que tenga en cuenta el padding y el margin en el tamaño total */
+/* Variables de colores */
+:root {
+  --color-primario: #2C3E50;
+  --color-secundario: #E74C3C;
+  --color-fondo: #f0f0f0;
+  --color-texto: #333;
+  --color-footer: #ecf0f1;
+  --color-footer-text: #7f8c8d;
+}
+
+/* Reset básico y box-sizing */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Establecemos altura completa del documento */
 html, body {
-    height: 100%;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-texto);
+  background: var(--color-fondo);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-/* El body se convierte en contenedor flex
-    - flex-direction: column -> apila verticalmente el header, main y footer 
-    - min-height: 100vh -> ocupa toda la altura de la ventana (vh = viewport height)
-*/
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #333;
-    background: #f0f0f0;
-    display: flex;
+/* HEADER */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--color-primario);
+  color: #fff;
+}
+
+.header__brand { display: flex; align-items: center; }
+.header__logo { max-height: 100px; width: auto; }
+
+.header__nav { display: flex; }
+.nav__menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav__link {
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+}
+.nav__link:hover,
+.nav__link:focus { color: var(--color-secundario); outline: none; }
+
+.header__search {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.search__input {
+  padding: 0.3rem 0.5rem;
+  border: 2px solid var(--color-primario);
+  border-radius: 4px;
+}
+.search__input:focus { outline: 2px solid var(--color-secundario); }
+.search__button { padding: 0.3rem 0.7rem; cursor: pointer; }
+
+/* MAIN */
+.main { flex: 1; padding: 1rem; display: flex; flex-direction: column; gap: 1rem; }
+
+/* INTRO / GUIDES */
+.intro, .guides { background: #fff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.3); margin: 1rem auto; max-width: 900px; }
+.intro__title, .guides__title { margin-bottom: 1rem; }
+.intro__text, .intro__notice { margin-bottom: 0.5rem; color: #555; }
+
+/* GUIDES LISTS */
+.guides__lists { display: flex; gap: 2rem; flex-wrap: wrap; }
+.guides__column { flex: 1 1 200px; }
+.guides__list { padding-left: 20px; margin-bottom: 1rem; }
+
+/* TABLE */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+.table th { background: var(--color-primario); color: #fff; text-align: center; }
+.table td { text-align: left; }
+
+/* FORM-CARD */
+.form-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  margin: 1rem auto;
+  max-width: 500px;
+}
+.form-card__title { margin-bottom: 1rem; }
+.form-card__input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 2px solid var(--color-primario);
+  border-radius: 4px;
+}
+.form-card__input:valid { border-color: green; }
+.form-card__input:invalid { border-color: red; }
+.form-card__input:focus { outline: 2px solid var(--color-secundario); }
+.form-card__button {
+  padding: 0.5rem 1rem;
+  background: var(--color-primario);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.form-card__button:hover, .form-card__button:focus { 
+    background: var(--color-secundario); outline: none; 
+}
+
+/* FOOTER */
+.footer {
+  background: var(--color-footer);
+  color: var(--color-footer-text);
+  text-align: center;
+  padding: 1rem;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .header { flex-direction: column; gap: 1rem; }
+  .nav__menu { flex-direction: column; gap: 0.5rem; }
+  .guides__lists { flex-direction: column; }
+}
+/* SHOP */
+.shop {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 1rem auto;
+  max-width: 1200px;
+}
+
+.shop__title {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.shop__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* CARD */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  padding: 1rem;
+  width: 220px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card__image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.card__title {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.card__description {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.card__price {
+  font-weight: bold;
+  color: var(--color-primario);
+}
+
+.card__button {
+  padding: 0.5rem;
+  background: var(--color-primario);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+.card__button:hover,
+.card__button:focus {
+  background: var(--color-secundario);
+  outline: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .shop__cards {
     flex-direction: column;
-    min-height: 100vh;      /* Altura total del viewport */
+    align-items: center;
+  }
+  .card { width: 90%; }
 }
 
-/* Centramos y rellenamos la cabecera */
-/* CABECERA con FLEX: dos zonas -> logo/titulo (marca) y menú (nav)*/
-.cabecera {
-    text-align: center;
-    padding: 1rem;
-    color: #fff;
-    background: #2C3E50;
-    display: flex;
-    justify-content: space-between; /* Posiciona marca izq. y nav derecha */
-    align-items: center;            /* Centra verticalmente */
+/* FORM CARD CONTACTO */
+.form-card--contact .form-card__field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
 }
 
-/* Tamaño de la imagen (logo) */
-.logo {
-    height: 100px;
-    width: auto;
-    /* display: block; */
+.form-card--contact .form-card__label {
+  margin-bottom: 0.3rem;
+  font-weight: bold;
 }
 
-/* Título de la cabecera sin márgenes extra y color destacado */
-/* .titulo {
-    margin: 0;
-    color: #2C3E50;
-} */
-
-/* Menú de navegación con flex */
-.menu {
-    list-style-type: none;
-    display: flex;          /* Para colocar los enlaces/ítems en línea */
-    flex-direction: row;    /* Por defecto es row, por tanto podemos prescindir de esta línea */
-    gap: 1.5rem;            /* Espacio entre enlaces */
-    margin: 0;
-    padding: 0;
+.form-card--contact .form-card__input,
+.form-card--contact textarea.form-card__input {
+  padding: 0.5rem;
+  border: 2px solid var(--color-primario);
+  border-radius: 4px;
 }
 
-/* Estilos básicos de los enlaces del menú */
-.menu a {
-    color: #fff;
-    text-decoration: none;      /* Elimina el subrayado */
-    font-weight: bold;          /* Aplica negrita a los enlaces */
-    /* padding: 1rem; */
+.form-card--contact .form-card__input:focus {
+  outline: 2px solid var(--color-secundario);
 }
 
-/* Efecto hover en enlaces */
-.menu a:hover {
-    color: #E74C3C;
-    /* background-color: #fff; */
-}
-
-
-/* Zona principal (main): aplicamos relleno */
-#contenido-principal {
-    padding: 1rem;
-    flex-grow: 1;           /*IMPORTANTE para "empujar" al footer hacia abajo*/
-    /* flex: 1; */          /* Atajo de las propiedades flex-grow y flex-basis */
-
-    display: flex;          /* Convierto al main como contenedor flexible */
-    flex-direction: column;
-    gap: 1rem;
-}
-
-/* Clase "tarjeta": usado para agrupar secciones visualmente */
-.tarjeta {
-    background: #fff;
-    width: min(900px, 95%);
-    margin: 1.5rem auto;      /* Centramos el contenido */
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
-    border: 1px solid #ddd;
-}
-
-/*Listas en dos columnas: usamos flexbox para alinear dos elementos en horizontal*/
-.listas {
-    display: flex;          /* Contenedor flexible */
-    flex-direction: row;    /* Los items se coloquen en filas */
-    gap: 2rem;              /* Hueco entre columnas */
-    flex-wrap: wrap;        /* Permite saltar a la siguiente línea en pantallas pequeñas */
-    /* flex-flow: row wrap; */
-}
-
-/* Ajustes visuales de las listas */
-.lista {
-    padding-left: 20px;     /*Espacio para las viñetas*/
-}
-
-.lista li {
-    margin: 0.25rem 0;      /* Espacio vertical entre los elementos de las listas */
-}
-
-/* Tabla: 
-    - width: ocupe todo el ancho
-    - border-collapse: unir los bordes internos
-*/
-.tabla {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-}
-
-/* Bordes y relleno de la tabla */
-.tabla th, .tabla td {
-    border: 1px solid #ddd;
-    padding: 10px;
-}
-
-/* Cabecera de la tabla con estilo diferenciado */
-.tabla th {
-    background: #2C3E50;
-    color: #fff;
-    text-align: center;
-}
-
-/* Contenido de tabla alineado a la izquierda */
-.tabla td {
-    text-align: left;
-    white-space: nowrap;    /* Evita saltos de línea en celdas */
-}
-
-/* Estilo pie de página */
-.pie {
-    color: #7f8c8d;
-    font-size: 14px;
-    background: #ecf0f1;
-    text-align: center;
-    padding: 1rem;
-}
-input {
-  border: 2px solid #2C3E50;
-}
-
-/* válido tras interacción */
-.registro:user-valid {
-  border: 2px solid green;
-}
-/* inválido tras interacción */
-.registro:user-invalid {
-  border: 2px solid red;
-}
-.registro{
-    box-align: right;
-    margin-bottom: 10px;
-}
-.aviso {
-    font-size: 0.9rem;
-    color: #888;
-    margin-top: 0.5rem;
-}
-/* Ingredientes */
-.tabla2 {
-    margin-top: 0.5rem;
-}
-
-.tabla2 {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.tabla2 th {
-    background-color: #2C3E50;
-    color: white;
-    padding: 0.75rem 1rem;
-    font-weight: bold;
-    text-align: center;
-}
-
-.tabla2 td {
-    padding: 0.65rem 1rem;
-    border-bottom: 1px solid #eee;
-    text-align: center;
-}
-
-.tabla2 tbody tr:nth-child(even) {
-    background-color: #fafafa;
-}
-
-.tabla2 tbody tr:last-child td {
-    border-bottom: none;
+.form-card--contact .form-card__button {
+  margin-top: 1rem;
 }

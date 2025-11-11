@@ -8,49 +8,50 @@
   <title>GameZone – Tu portal de videojuegos</title>
 </head>
 <body>
-  <header class="cabecera">
-    <div class="marca">
-      <img src="imagenes/gamezone-logo.png" alt="Logotipo GameZone" class="logo">
+  <header class="header">
+    <div class="header__brand">
+      <img src="imagenes/gamezone-logo.png" alt="Logotipo GameZone" class="header__logo">
     </div>
-    <nav class="navegacion">
-        <ul class="menu">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="#">Noticias</a></li>
-            <li><a href="#">Guías</a></li>
-            <li><a href="#">Contacto</a></li>
-            <li><a href="pages/registro.html">Registro</a></li>
-        </ul>
-        <section class="tarjeta buscador">
-            <form name="buscar-juego" action="buscar.html" method="get">
-                <label for="busqueda">Buscar juego:</label>
-                <input type="search" id="busqueda" name="busqueda" placeholder="Introduce el nombre del juego">
-                <button type="submit">Buscar</button>
-            </form>
-        </section>
+
+    <nav class="header__nav">
+      <ul class="nav__menu">
+        <li class="nav__item"><a href="index.html" class="nav__link">Inicio</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Noticias</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Guías</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Contacto</a></li>
+        <li class="nav__item"><a href="pages/registro.html" class="nav__link">Registro</a></li>
+        <li class="nav__item"><a href="pages/tienda.html" class="nav__link">Tienda</a></li>
+      </ul>
     </nav>
+
+    <form class="header__search" action="buscar.html" method="get">
+      <label for="busqueda" class="search__label">Buscar juego:</label>
+      <input type="search" id="busqueda" name="busqueda" placeholder="Introduce el nombre del juego" class="search__input">
+      <button type="submit" class="search__button">Buscar</button>
+    </form>
   </header>
 
-  <main id="contenido-principal">
-    <section class="intro tarjeta">
-      <h2>Bienvenido a GameZone</h2>
-      <p>Tu portal de referencia para todo lo relacionado con videojuegos: noticias, guías, análisis y comunidad.</p>
-      <p class="aviso">En este bloque aplicamos el box model sobre esta tarjeta.</p>
+  <main class="main" role="main">
+    <section class="intro intro--home">
+      <h1 class="intro__title">Bienvenido a GameZone</h1>
+      <p class="intro__text">Tu portal de referencia para todo lo relacionado con videojuegos: noticias, guías, análisis y comunidad.</p>
+      <p class="intro__notice">En este bloque aplicamos el box model sobre esta tarjeta.</p>
     </section>
 
-    <section class="listas-y-tabla tarjeta">
-      <h2>Guía rápida</h2>
-      <div class="listas">
-        <div>
-          <h3>Características</h3>
-          <ul class="lista">
+    <section class="guides">
+      <h2 class="guides__title">Guía rápida</h2>
+      <div class="guides__lists">
+        <div class="guides__column">
+          <h3 class="guides__subtitle">Características</h3>
+          <ul class="guides__list">
             <li>Análisis semanales</li>
             <li>Guías paso a paso</li>
             <li>Comunidad activa</li>
           </ul>
         </div>
-        <div>
-          <h3>Primeros pasos</h3>
-          <ol class="lista">
+        <div class="guides__column">
+          <h3 class="guides__subtitle">Primeros pasos</h3>
+          <ol class="guides__list">
             <li>Elige tu género favorito</li>
             <li>Explora la galería</li>
             <li>Lee las guías</li>
@@ -59,27 +60,27 @@
         </div>
       </div>
 
-      <h3>Top ventas</h3>
-      <table class="tabla">
+      <h3 class="guides__subtitle">Top ventas</h3>
+      <table class="table">
         <caption>Juegos más vendidos</caption>
         <thead>
           <tr>
-            <th>Juego</th>
-            <th>Plataforma</th>
-            <th>Precio</th>
+            <th scope="col">Juego</th>
+            <th scope="col">Plataforma</th>
+            <th scope="col">Precio</th>
           </tr>
         </thead>
         <tbody>
           <tr><td>Racing Challenge</td><td>PC</td><td>120 €</td></tr>
-          <tr><td>Magic Realms</td><td>PS</td><td>95.50 €</td></tr>
-          <tr><td>City Builder</td><td>NS</td><td>81.20 €</td></tr>
+          <tr><td>Magic Realms</td><td>PS</td><td>95,50 €</td></tr>
+          <tr><td>City Builder</td><td>NS</td><td>81,20 €</td></tr>
         </tbody>
       </table>
     </section>
   </main>
 
-  <footer class="pie">
-    <p>&copy; 2025 Todos los derechos reservados.</p>
+  <footer class="footer">
+    <p class="footer__text">&copy; 2025 Todos los derechos reservados.</p>
   </footer>
 </body>
 </html>

@@ -8,37 +8,39 @@
   <title>Registro completado – GameZone</title>
 </head>
 <body>
-    <header class="cabecera">
-        <div class="marca">
-            <img src="../imagenes/gamezone-logo.png" alt="Logotipo GameZone" class="logo">
-        </div>
-        <nav class="navegacion">
-            <ul class="menu">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Noticias</a></li>
-                <li><a href="#">Guías</a></li>
-                <li><a href="#">Contacto</a></li>
-                <li><a href="#">Registro</a></li>
-            </ul>
-            <section class="tarjeta buscador">
-                <form name="buscar-juego" action="buscar.html" method="get">
-                    <label for="busqueda">Buscar juego:</label>
-                    <input type="search" id="busqueda" name="busqueda" placeholder="Introduce el nombre del juego">
-                    <button type="submit">Buscar</button>
-                </form>
-            </section>
-        </nav>
-    </header>
-    <main id="contenido-principal">
-        <section class="intro tarjeta">
-            <h2>Registro completado</h2>
-            <p>¡Felicidades! El registro se ha realizado correctamente.</p>
-            <p class="aviso">Por favor, verifica tu correo electrónico para completar la confirmación.</p>
-        </section>
-    </main>
+  <header class="header">
+    <div class="header__brand">
+      <img src="../imagenes/gamezone-logo.png" alt="Logotipo GameZone" class="header__logo">
+    </div>
 
-    <footer class="pie">
-        <p>&copy; 2025 Todos los derechos reservados.</p>
-    </footer>
+    <nav class="header__nav">
+      <ul class="nav__menu">
+        <li class="nav__item"><a href="../index.html" class="nav__link">Inicio</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Noticias</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Guías</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Contacto</a></li>
+        <li class="nav__item"><a href="registro.html" class="nav__link nav__link--active">Registro</a></li>
+        <li class="nav__item"><a href="tienda.html" class="nav__link">Tienda</a></li>
+      </ul>
+    </nav>
+
+    <form class="header__search" action="buscar.html" method="get">
+      <label for="busqueda" class="search__label">Buscar juego:</label>
+      <input type="search" id="busqueda" name="busqueda" placeholder="Introduce el nombre del juego" class="search__input">
+      <button type="submit" class="search__button">Buscar</button>
+    </form>
+  </header>
+
+  <main class="main" role="main">
+    <section class="intro intro--completed">
+      <h1 class="intro__title">Registro completado</h1>
+      <p class="intro__text">¡Felicidades! El registro se ha realizado correctamente.</p>
+      <p class="intro__notice">Por favor, verifica tu correo electrónico para completar la confirmación.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__text">&copy; 2025 Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>

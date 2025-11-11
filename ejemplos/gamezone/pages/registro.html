@@ -8,49 +8,62 @@
   <title>Registro – GameZone</title>
 </head>
 <body>
-    <header class="cabecera">
-        <div class="marca">
-        <img src="../imagenes/gamezone-logo.png" alt="Logotipo GameZone" class="logo">
-        </div>
-        <nav class="navegacion">
-            <ul class="menu">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="#">Noticias</a></li>
-                <li><a href="#">Guías</a></li>
-                <li><a href="#">Contacto</a></li>
-                <li><a href="registro.html">Registro</a></li>
-            </ul>
-            <section class="tarjeta buscador">
-                <form name="buscar-juego" action="buscar.html" method="get">
-                    <label for="busqueda">Buscar juego:</label>
-                    <input type="search" id="busqueda" name="busqueda" placeholder="Introduce el nombre del juego">
-                    <button type="submit">Buscar</button>
-                </form>
-            </section>
-        </nav>
-    </header>
+  <header class="header">
+    <div class="header__brand">
+      <img src="../imagenes/gamezone-logo.png" alt="Logotipo GameZone" class="header__logo">
+    </div>
 
-<main id="contenido-principal">
-    <section class="tarjeta">
-      <form name="register" action="registrocompleto.html" method="post">
-      <table class="tabla2">
-        <tbody>
-          <th colspan="2">Registro de usuario</th>
-          <tr><td><label for="nombre">Nombre de usuario:</label></td><td><input class="registro" type="text" id="nombre" name="nombre" placeholder="Nombre de usuario" required></td></tr>
-          <tr><td><label for="clave">Contraseña:</label></td><td><input class="registro" type="password" id="clave" name="clave" placeholder="Contraseña" minlength="6" maxlength="12" required></td></tr>
-          <tr><td><label for="email">Correo electrónico:</label></td><td><input class="registro" type="email" id="email" name="email" placeholder="ejemplo@correo.com" required></td></tr>
-          <tr><td><label for="dni">DNI/NIE:</label></td><td><input class="registro" type="text" id="dni" name="dni" pattern="([0-9]{1}|[X-Zx-z]{1}-?)[0-9]{7}[A-Za-z]{1}" placeholder="12345678L/X1234567L" required></td></tr>
-          <tr><td colspan="2"><button type="submit">Registrarse</button></td></tr>
-        </tbody>
-      
+    <nav class="header__nav">
+      <ul class="nav__menu">
+        <li class="nav__item"><a href="../index.html" class="nav__link">Inicio</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Noticias</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Guías</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Contacto</a></li>
+        <li class="nav__item"><a href="registro.html" class="nav__link">Registro</a></li>
+        <li class="nav__item"><a href="tienda.html" class="nav__link">Tienda</a></li>
+      </ul>
+    </nav>
 
+    <form class="header__search" action="buscar.html" method="get">
+      <label for="busqueda" class="search__label">Buscar juego:</label>
+      <input type="search" id="busqueda" name="busqueda" placeholder="Introduce el nombre del juego" class="search__input">
+      <button type="submit" class="search__button">Buscar</button>
+    </form>
+  </header>
+
+  <main class="main" role="main">
+    <section class="form-card form-card--register">
+      <h1 class="form-card__title">Registro de usuario</h1>
+      <form class="form-card__form" name="register" action="registrocompleto.html" method="post">
+        <table class="form-card__table">
+          <tbody>
+            <tr>
+              <td><label for="nombre">Nombre de usuario:</label></td>
+              <td><input class="form-card__input" type="text" id="nombre" name="nombre" placeholder="Nombre de usuario" required></td>
+            </tr>
+            <tr>
+              <td><label for="clave">Contraseña:</label></td>
+              <td><input class="form-card__input" type="password" id="clave" name="clave" placeholder="Contraseña" minlength="6" maxlength="12" required></td>
+            </tr>
+            <tr>
+              <td><label for="email">Correo electrónico:</label></td>
+              <td><input class="form-card__input" type="email" id="email" name="email" placeholder="ejemplo@correo.com" required></td>
+            </tr>
+            <tr>
+              <td><label for="dni">DNI/NIE:</label></td>
+              <td><input class="form-card__input" type="text" id="dni" name="dni" pattern="([0-9]{1}|[X-Zx-z]{1}-?)[0-9]{7}[A-Za-z]{1}" placeholder="12345678L/X1234567L" required></td>
+            </tr>
+            <tr>
+              <td colspan="2"><button type="submit" class="form-card__button">Registrarse</button></td>
+            </tr>
+          </tbody>
         </table>
       </form>
     </section>
-</main>
+  </main>
 
-  <footer class="pie">
-    <p>&copy; 2025 Todos los derechos reservados.</p>
+  <footer class="footer">
+    <p class="footer__text">&copy; 2025 Todos los derechos reservados.</p>
   </footer>
 </body>
 </html>
