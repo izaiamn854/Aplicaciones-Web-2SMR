@@ -1,0 +1,87 @@
+/* Cuerpo de la página */
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Cabecera */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+header img {
+    width: 300px;
+    height: 110px;
+}
+
+/* Contenido principal */
+main {
+    flex: 1;
+    padding: 2rem;
+}
+
+/* Formulario */
+form fieldset {
+    background-color: #F4F1ED;
+    color: firebrick;
+    border: 9px solid darkgoldenrod;
+    border-radius: 7px;
+    width: 400px;
+}
+
+legend {
+    color: darkblue;
+    font-weight: bold;
+}
+
+.campo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.campo-imagen {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+footer h3 {
+    color: #F7C600;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer img {
+    width: 48px;
+    height: 48px;
+}
