@@ -162,6 +162,43 @@ input {
 .registro:user-invalid {
   border: 2px solid red;
 }
-.buscar-juego-label{
-    color: #000000;
+.registro{
+    box-align: right;
+    margin-bottom: 10px;
+}
+.aviso {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 0.5rem;
+}
+/* Ingredientes */
+.tabla2 {
+    margin-top: 0.5rem;
+}
+
+.tabla2 {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla2 th {
+    background-color: #2C3E50;
+    color: white;
+    padding: 0.75rem 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.tabla2 td {
+    padding: 0.65rem 1rem;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+.tabla2 tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.tabla2 tbody tr:last-child td {
+    border-bottom: none;
 }

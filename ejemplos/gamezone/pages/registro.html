@@ -14,11 +14,11 @@
         </div>
         <nav class="navegacion">
             <ul class="menu">
-                <li><a href="#">Inicio</a></li>
+                <li><a href="../index.html">Inicio</a></li>
                 <li><a href="#">Noticias</a></li>
                 <li><a href="#">Guías</a></li>
                 <li><a href="#">Contacto</a></li>
-                <li><a href="#">Registro</a></li>
+                <li><a href="registro.html">Registro</a></li>
             </ul>
             <section class="tarjeta buscador">
                 <form name="buscar-juego" action="buscar.html" method="get">
@@ -32,25 +32,19 @@
 
 <main id="contenido-principal">
     <section class="tarjeta">
-        <h2>Registro de usuario</h2>
-        <form name="register" action="registrocompleto.html" method="post">
-        <div class="form-group">
-          <label for="nombre">Nombre de usuario:</label>
-          <input class="registro" type="text" id="nombre" name="nombre" placeholder="Nombre de usuario" required>
-        </div>
-        <div class="form-group">
-          <label for="clave">Contraseña:</label>
-          <input class="registro" type="password" id="clave" name="clave" placeholder="Contraseña" minlength="6" maxlength="12" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Correo electrónico:</label>
-          <input class="registro" type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
-        </div>
-        <div class="form-group">
-          <label for="dni">DNI/NIE:</label>
-          <input class="registro" type="text" id="dni" name="dni" pattern="([0-9]{1}|[X-Zx-z]{1}-?)[0-9]{7}[A-Za-z]{1}" placeholder="12345678L/X1234567L" required>
-        </div>
-        <button type="submit">Registrarse</button>
+      <form name="register" action="registrocompleto.html" method="post">
+      <table class="tabla2">
+        <tbody>
+          <th colspan="2">Registro de usuario</th>
+          <tr><td><label for="nombre">Nombre de usuario:</label></td><td><input class="registro" type="text" id="nombre" name="nombre" placeholder="Nombre de usuario" required></td></tr>
+          <tr><td><label for="clave">Contraseña:</label></td><td><input class="registro" type="password" id="clave" name="clave" placeholder="Contraseña" minlength="6" maxlength="12" required></td></tr>
+          <tr><td><label for="email">Correo electrónico:</label></td><td><input class="registro" type="email" id="email" name="email" placeholder="ejemplo@correo.com" required></td></tr>
+          <tr><td><label for="dni">DNI/NIE:</label></td><td><input class="registro" type="text" id="dni" name="dni" pattern="([0-9]{1}|[X-Zx-z]{1}-?)[0-9]{7}[A-Za-z]{1}" placeholder="12345678L/X1234567L" required></td></tr>
+          <tr><td colspan="2"><button type="submit">Registrarse</button></td></tr>
+        </tbody>
+      
+
+        </table>
       </form>
     </section>
 </main>
