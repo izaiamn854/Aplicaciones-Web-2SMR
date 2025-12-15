@@ -1,113 +1,78 @@
-<!DOCTYPE html>
-<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Ismael Abdeslam Zaim Wadghiri Amnad">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nueva incidencia</title>
-    <link rel="stylesheet" href="estilos.css">
-</head>
-<body>
-    <header>
-        <img src="imagenes/IAT-LOGOTIPO.jpg" alt="Logo del CPIFP Alan Turing">
-    </header>
-
-    <main>
-        <form action="procesarincidencia.php" method="post" enctype="multipart/form-data">
-            <fieldset>
-                <legend>Nueva incidencia</legend>
-
-                <div class="campo">
-                    <label for="profesor">Profesor*:</label>
-                    <input type="text" id="profesor" name="profesor" required>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Portal de videojuegos GameZone">
+        <link rel="stylesheet" href="estilos.css">
+        <title>GameZone – Tu portal de videojuegos</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__brand">
+                <img src="imagenes/gamezone-logo.png" alt="Logotipo GameZone" class="header__logo">
+            </div>
+            <nav class="header__nav">
+                <ul class="nav__menu">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Inicio</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Noticias</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Guías</a></li>
+                    <li class="nav__item"><a href="pages/contacto.html" class="nav__link">Contacto</a></li>
+                    <li class="nav__item"><a href="pages/registro.html" class="nav__link">Registro</a></li>
+                    <li class="nav__item"><a href="pages/tienda.html" class="nav__link">Tienda</a></li>
+                </ul>
+            </nav>
+            <form class="header__search" action="buscar.html" method="get">
+                <label for="busqueda" class="search__label">Buscar juego:</label>
+                <input type="search" id="busqueda" name="busqueda" placeholder="Introduce el nombre del juego" class="search__input">
+                <button type="submit" class="search__button">Buscar</button>
+            </form>
+        </header>
+        <main class="main" role="main">
+            <section class="intro intro--home">
+            <h1 class="intro__title">Bienvenido a GameZone</h1>
+            <p class="intro__text">Tu portal de referencia para todo lo relacionado con videojuegos: noticias, guías, análisis y comunidad.</p>
+            <p class="intro__notice">En este bloque aplicamos el box model sobre esta tarjeta.</p>
+            </section>
+            <section class="guides">
+                <h2 class="guides__title">Guía rápida</h2>
+                <div class="guides__lists">
+                    <div class="guides__column">
+                        <h3 class="guides__subtitle">Características</h3>
+                        <ul class="guides__list">
+                            <li>Análisis semanales</li>
+                            <li>Guías paso a paso</li>
+                            <li>Comunidad activa</li>
+                        </ul>
+                    </div>
+                    <div class="guides__column">
+                        <h3 class="guides__subtitle">Primeros pasos</h3>
+                        <ol class="guides__list">
+                            <li>Elige tu género favorito</li>
+                            <li>Explora la galería</li>
+                            <li>Lee las guías</li>
+                            <li>Comparte tu opinión</li>
+                        </ol>
+                    </div>
                 </div>
-
-                <div class="campo">
-                    <label for="correo">Correo electrónico*:</label>
-                    <input type="email" id="correo" name="correo" required>
-                </div>
-
-                <div class="campo">
-                    <label for="departamento">Departamento*:</label>
-                    <select id="departamento" name="departamento" required>
-                        <option value="">Seleccione...</option>
-                        <option>Informática</option>
-                        <option>Administración</option>
-                        <option>Jefatura</option>
-                        <option>Limpieza</option>
-                        <option>Mantenimiento</option>
-                    </select>
-                </div>
-
-                <div class="campo">
-                    <label for="aula">Aula*:</label>
-                    <input type="number" id="aula" name="aula" required>
-                </div>
-
-                <div class="campo">
-                    <label for="semana">Día de la semana*:</label>
-                    <select id="semana" name="semana" required>
-                        <option value="">Seleccione...</option>
-                        <option>Lunes</option>
-                        <option>Martes</option>
-                        <option>Miércoles</option>
-                        <option>Jueves</option>
-                        <option>Viernes</option>
-                    </select>
-                </div>
-
-                <div class="campo">
-                    <label for="dia">Día del mes*:</label>
-                    <input type="number" id="dia" name="dia" min="1" max="31" required>
-                </div>
-
-                <div class="campo">
-                    <label for="anio">Año*:</label>
-                    <input type="number" id="anio" name="anio" min="2024" max="2030" required>
-                </div>
-
-                <div class="campo">
-                    <label for="hora">Hora de la incidencia*:</label>
-                    <input type="time" id="hora" name="hora" required>
-                </div>
-
-                <div class="campo">
-                    <label for="descripcion">Descripción de la incidencia*:</label>
-                    <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
-                </div>
-
-                <div class="campo-imagen">
-                    <label for="imagen">Imagen de la incidencia (opcional):</label>
-                    <input type="file" id="imagen" name="imagen" accept="image/*">
-                </div>
-
-                <div class="botones">
-                    <button type="submit">Enviar incidencia</button>
-                    <button type="reset">Borrar formulario</button>
-                </div>
-            </fieldset>
-        </form>
-    </main>
-
-    <footer>
-        <h3>Síguenos</h3>
-        <div>
-            <a href="https://www.facebook.com/cpifpalanturing" target="_blank">
-                <img src="imagenes/facebook.png" alt="Facebook">
-            </a>
-            <a href="https://twitter.com/cpifpalanturing" target="_blank">
-                <img src="imagenes/twitter.png" alt="Twitter">
-            </a>
-            <a href="https://www.instagram.com/cpifpalanturing" target="_blank">
-                <img src="imagenes/instagram.png" alt="Instagram">
-            </a>
-            <a href="https://www.youtube.com/@cpifpalanturing" target="_blank">
-                <img src="imagenes/youtube.png" alt="YouTube">
-            </a>
-            <a href="https://cpifpalanturing.es" target="_blank">
-                <img src="imagenes/web.png" alt="Web del centro">
-            </a>
-        </div>
-    </footer>
-</body>
+                <h3 class="guides__subtitle">Top ventas</h3>
+                <table class="table">
+                    <caption>Juegos más vendidos</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Juego</th>
+                            <th scope="col">Plataforma</th>
+                            <th scope="col">Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Racing Challenge</td><td>PC</td><td>120 €</td></tr>
+                        <tr><td>Magic Realms</td><td>PS</td><td>95,50 €</td></tr>
+                        <tr><td>City Builder</td><td>NS</td><td>81,20 €</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+        <footer class="footer">
+            <p class="footer__text">&copy; 2025 Todos los derechos reservados.</p>
+        </footer>
+    </body>
 </html>
