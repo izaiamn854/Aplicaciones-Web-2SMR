@@ -1,0 +1,92 @@
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Portal de videojuegos GameZone">
+        <link rel="stylesheet" href="../estilos.css">
+        <title>GameZone – Tu portal de videojuegos</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__brand">
+                <img src="../imagenes/gamezone-logo.png" alt="Logotipo GameZone" class="header__logo">
+            </div>
+            <nav class="header__nav">
+                <ul class="nav__menu">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Inicio</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Noticias</a></li>
+                    <li class="nav__item"><a href="guias.html" class="nav__link">Guías</a></li>
+                    <li class="nav__item"><a href="contacto.html" class="nav__link">Contacto</a></li>
+                    <li class="nav__item"><a href="registro.html" class="nav__link">Registro</a></li>
+                    <li class="nav__item"><a href="tienda.html" class="nav__link">Tienda</a></li>
+                </ul>
+            </nav>
+            <form class="header__search" action="buscar.html" method="get">
+                <label for="busqueda" class="search__label">Buscar juego:</label>
+                <input type="search" id="busqueda" name="busqueda" placeholder="Introduce el nombre del juego" class="search__input">
+                <button type="submit" class="search__button">Buscar</button>
+            </form>
+        </header>
+        <main class="guias" role="main">
+            <h1>Guías y tutoriales</h1>
+            <p>Aquí encontrarás una selección de vídeos con guías, trucos y tutoriales</p>
+
+            <section class="guias-videos">
+                <h2>Vídeos destacados</h2>
+
+                <!-- Contenedor grid de vídeos -->
+                <div class="guias-grid">
+                    <!-- Vídeo(ítem) 1 -->
+                    <article class="guia-video">
+                        <h3>Guía 1: God of War</h3>
+                        <iframe 
+                            src="https://www.youtube.com/embed/LFeLNRLQh0c"
+                            title="Guía 1: God of War"
+                            loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+                    </article>
+
+                    <!-- Vídeo(ítem) 2 -->
+                    <article class="guia-video">
+                        <h3>Guía 2: Fortnite</h3>
+                        <iframe 
+                            src="https://www.youtube.com/embed/sw0WfaWYwa8"
+                            title="Guía 2: Fortnite"
+                            loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+                    </article>
+
+                    <!-- Vídeo(ítem) 3 -->
+                    <article class="guia-video">
+                        <h3>Guía 3: Mario Kart</h3>
+                        <iframe 
+                            src="https://www.youtube.com/embed/jXSsuyf6mKY"
+                            title="Guía 3: Mario kart"
+                            loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+                    </article>
+
+                    <!-- Vídeo(ítem) 4 -->
+                    <article class="guia-video">
+                        <h3>Guía 4: Counter Strike</h3>
+                        <iframe 
+                            src="https://www.youtube.com/embed/BlgCbcGlYLU"
+                            title="Guía 4: Counter Strike"
+                            loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <p class="footer__text">&copy; 2025 Todos los derechos reservados.</p>
+        </footer>
+    </body>
+</html>
